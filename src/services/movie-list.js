@@ -5,7 +5,7 @@ export default {
 	movieListData: {},
 	getMovieList() {
 		return axios
-			.get('/api/movies.json')
+			.get(globalVariable.API_URL)
 			.then(res => {
 				this.movieListData = res.data;
 				return true;
