@@ -1,0 +1,35 @@
+@import './../../scss/common.scss';
+.applied-filter-wrapper {
+	align-items: center;
+}
+.applied-filter-list {
+	list-style-type: none;
+	margin: 5px 0;
+	li {
+		+ li {
+			margin-left: 10px;
+		}
+	}
+}
+.applied-filter-title {
+	color: $text-secondary;
+}
+.applied-filter-list button {
+	display: inline-block;
+	background: #333333;
+	padding: 5px 8px 5px 16px;
+	border-radius: 13px;
+	font-size: 13px;
+	line-height: 1;
+	cursor: pointer;
+	color: $text-secondary;
+	border: 0;
+	&:hover,
+	&:focus {
+		color: #fff;
+	}
+	&:after {
+		content: '\2715';
+		padding-left: 10px;
+	}
+}

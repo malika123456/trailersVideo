@@ -1,0 +1,39 @@
+@import '../../scss/common.scss';
+#movies-list {
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	li {
+		list-style-type: none;
+	}
+}
+
+.movie-item {
+	padding: 0 5px;
+	list-style-type: none;
+	margin-bottom: 20px;
+	width: 20%;
+	&.trailer-opened .single-movie {
+		border: 3px solid $primary-color;
+	}
+}
+#movie-item-error {
+	color: $error-color;
+	width: 100%;
+}
+.movie-item-error-text {
+	font-size: 22px;
+	padding: 0 28px;
+}
+
+@media only screen and (max-width: 1024px) {
+	.movie-item {
+		width: 33%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.movie-item {
+		width: 50%;
+	}
+}

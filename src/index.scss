@@ -1,0 +1,126 @@
+@import './scss/common.scss';
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+html {
+	font-size: 100%;
+}
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	background-color: #1c1c1c;
+	color: $text-primary;
+}
+a {
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+img {
+	max-width: 100%;
+}
+.btn-primary,
+.btn-secondary {
+	border: 0;
+	border-radius: 4px;
+	padding: 8px 18px;
+	transition: all ease 0.2s;
+	cursor: pointer;
+}
+
+.btn-primary {
+	background: $primary-color;
+	color: #fff;
+	&:hover,
+	&:focus {
+		color: #fff;
+		background: $secondary-color;
+	}
+
+	&[disabled] {
+		background: $disabled-color;
+	}
+}
+
+.btn-secondary {
+	background: #333;
+	color: #c7c7c7;
+	&:hover,
+	&:focus {
+		background: $secondary-color;
+	}
+
+	&[disabled] {
+		background: $disabled-color;
+	}
+}
+input {
+	border: 0;
+	border-bottom: 1px solid #adadad;
+	padding: 10px;
+}
+.row {
+	max-width: 1440px;
+	margin: auto;
+	padding: 0 10px;
+}
+.display-flex {
+	display: flex;
+}
+.hidden {
+	display: none;
+}
+.option-selected {
+	border: 1px solid $primary-color;
+	background: transparent;
+	color: $primary-color;
+	position: relative;
+	padding: 7px 28px 7px 18px;
+	display: flex;
+	border-radius: 4px;
+	&:after {
+		content: '';
+		display: block;
+		width: 8px;
+		height: 8px;
+		border: 1px solid;
+		border-right-color: transparent;
+		border-top-color: transparent;
+		position: absolute;
+		right: 9px;
+		transform: rotate(-45deg);
+		top: 9px;
+	}
+	&:hover,
+	&:focus {
+		background: transparent;
+		color: $primary-color;
+	}
+}
+#movie-app {
+	position: relative;
+	z-index: 1;
+	> div {
+		background: rgba(28, 28, 28, 0.92);
+	}
+}
+#container {
+	margin-top: 55px;
+	padding-top: 10px;
+}
+@media only screen and (max-width: 1024px) {
+	#container {
+		margin-top: 92px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	#container {
+		margin-top: 133px;
+	}
+}

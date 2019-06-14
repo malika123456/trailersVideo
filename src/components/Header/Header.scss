@@ -1,0 +1,43 @@
+header {
+	background: #000;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 10;
+	.row {
+		padding-top: 10px;
+		align-items: center;
+	}
+}
+.sort-options {
+	margin-left: auto;
+	flex: 0 1 40%;
+}
+.logo-wrapper {
+	max-width: 150px;
+}
+.time-btn {
+	button {
+		margin-left: 15px;
+		margin-bottom: 10px;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.sort-options {
+		flex: 0 1 35%;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.sort-options {
+		flex: 0 1 172px;
+	}
+	.time-btn {
+		flex: 0 1 160px;
+	}
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.logo-wrapper {
+		width: 150px;
+	}
+}

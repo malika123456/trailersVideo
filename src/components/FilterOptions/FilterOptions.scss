@@ -1,0 +1,80 @@
+@import '../../scss/common.scss';
+.select-option-wrapper {
+	position: relative;
+	margin-bottom: 10px;
+	& + .select-option-wrapper {
+		margin-left: 15px;
+	}
+}
+
+.select-option {
+	position: absolute;
+	background: rgba(51, 51, 51, 0.9);
+	z-index: 10;
+	padding: 10px 0;
+	margin: 0;
+	width: 100%;
+	list-style-type: none;
+	text-align: left;
+}
+.options {
+	font-size: 13px;
+	padding: 3px 10px;
+	margin-bottom: 3px;
+	position: relative;
+	cursor: pointer;
+	&:before {
+		content: '';
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		border: 1px solid #e4e4e4;
+		vertical-align: middle;
+		margin-right: 8px;
+		position: relative;
+		top: -1px;
+		border-radius: 2px;
+	}
+	&:hover {
+		color: $primary-color;
+	}
+	&[data-selected='selected'],
+	&:hover {
+		&:before {
+			background: $primary-color;
+			border-color: $primary-color;
+		}
+		&:after {
+			content: '\2713';
+			color: #fff;
+			font-size: 09px;
+			top: 4px;
+			border: 0;
+			position: absolute;
+			left: 11px;
+		}
+	}
+}
+#filter-movies .option-selected {
+	min-width: 91px;
+}
+#filter-by-language .option-selected {
+	width: 133px;
+}
+#filter-by-genre .option-selected {
+	width: 119px;
+}
+.option-selected {
+	text-align: left;
+	span {
+		display: inline-block;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 100%;
+		text-overflow: ellipsis;
+	}
+}
+#filter-movies {
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
